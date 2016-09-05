@@ -11,8 +11,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
-import java.util.Date;
-
 public class MainActivity extends Activity implements View.OnClickListener {
     private  static final String TAG = "MainActivity";
     private Button startService;
@@ -42,7 +40,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         Intent intent = new Intent(this, LongRunningService.class);
         startService(intent);
-        //the event of add button ,jump to the second activity
+        //jump to another activity
         button_add = (Button)findViewById(R.id.add_button);
         startService=(Button)findViewById(R.id.start_service);
         stopService = (Button)findViewById(R.id.stop_service);
